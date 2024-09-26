@@ -13,6 +13,10 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\TarefaController::class, 'index'])->name('home')->middleware('verified');
+
+Route::get('tarefa/exportacao', 'App\Http\Controllers\TarefaController@exportacao')
+    ->name('tarefa.exportacao');
+    
 Route::resource('/tarefa', TarefaController::class)->middleware('verified');
 
 Route::get('/mensagem-teste', function() {
