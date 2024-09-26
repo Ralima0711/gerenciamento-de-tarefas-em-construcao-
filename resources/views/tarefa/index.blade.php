@@ -1,11 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
+
+<style >
+    .float-none {
+        float: right !important;
+    }
+</style> 
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Tarefas</div>
+                <div class="card-header">Tarefas<a href="{{route('tarefa.create')}}" class="float-none">Novo</a></div>
 
                 <div class="card-body">
                     
